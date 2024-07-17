@@ -1,0 +1,54 @@
+@{
+    ViewData["Title"] = "Importación de ordenes";
+}
+
+<div class="modal" tabindex="-1" style="display: block;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="header-modal">
+                <h5 id="prgrsshead" class="modal-title text-center">Estamos procesando tus ordenes</h5>
+            </div>
+            <div class="body-modal">
+                <p id="prgrsstail">Por favor, no cierres tu navegador.</p>
+                <a class="text-center revisar "  href="#" id="buttonReview" onclick="showResult(this)" hidden>Revisar</a>
+
+                <progress id="prgrss" class="mb-5 mt-4" style=" width: 350px;" max="100" value="0"></progress>
+                    <p id="progressCounter"></p>
+             
+
+                <table id="table" class="table table-striped table-earning" hidden>
+                    <thead >
+                        <tr>
+                            <th>N° Orden</th>
+                            <th>Observación</th>
+                        </tr>
+                    </thead>
+                    <tbody id="output" style="color: #191919;"></tbody>
+                </table>
+            </div>
+            <div class="footer-modal mx-auto pb-5 mt-4" id="buttons" hidden>
+                <script>
+                    const historyLength = window.history.length;
+
+                    if (historyLength != null && historyLength > 1) {
+                        // Open url in the same tab
+                        document.write('<a class="btn boton1" id="buttonBack" href="javascript:void(0);" onclick="history.go(-1);" hidden>Volver</a>');
+                    } else {
+                        // Open url in a new tab
+                        function windowClose() {
+                            window.open('', '_parent', '');
+                            window.close();
+                        }
+                        document.write('<a class="btn boton1" id="buttonBack" href="javascript:void(0);" onclick="windowClose();" hidden>Cerrar</a>');
+                    }
+                </script>
+                <a href="https://www.correoargentino.com.ar/MiCorreo/public/login" class="btn boton" id="buttonGoTo" hidden>Ir a MiCorreo</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/addnewordersv4.js"></script>
+}

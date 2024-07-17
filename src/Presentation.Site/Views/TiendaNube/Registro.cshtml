@@ -1,0 +1,317 @@
+﻿<div class="container login">
+    <form method="post" action="/tiendanube/RegisterProcess" enctype="multipart/form-data" class="form">
+        <h4 class="text-center mb-5">Registrarme</h4>
+        <div class="row">
+            <div class="col-12 d-flex flex-column flex-sm-column flex-md-row flex-lg flex-xl-row columnas">
+                <div class="col-6 colum1">
+                  
+
+                    <div class="dni">
+                        <div class="input-bs">
+                            <select class="form-control form-select form-select-sm" name="DocumentType" id="tipo_documento" data-val="true" data-val-required="Requerido">
+                                <option value="" selected="selected">Tipo</option>
+                                @foreach (var documentType in ViewBag.DocumentTypes)
+                                {
+                                    <option value="@documentType.DocumentName">@documentType.DocumentName</option>
+                                }
+                            </select>
+                            <span class="text-danger field-validation-valid span1" id="tipo" data-valmsg-for="DocumentType" data-valmsg-replace="true" style="font-size:12px"></span>
+                        </div>
+
+                        <div class="input-bs">
+                            <div class="input-bx">
+                                <input ayuda="Número de documento a quien se facturará el servicio. Sin puntos intermedios" type="text" name="DocumentNumber" required="required" id="documento" value="" autocomplete="off" data-val="true" data-val-required="El campo es requerido"/>
+                                <span id="span_documento">N° de documento</span>
+                            </div>
+                            <span class="text-danger field-validation-valid validation" data-valmsg-for="DocumentNumber" data-valmsg-replace="true" style="font-size:12px"></span>
+                        </div>
+                    </div>
+                   
+
+               
+                    <div class="dn" id="Company" style="display: none;">
+
+                        <div class="input-br mt-2"  >
+
+                            <input type="text" required="required" name="CompanyName" id="CompanyName" value=""
+                               data-val="true" data-val-required="El campo es requerido" ayuda="Nombre a quien se le facturará" />
+                        <span>Razón Social</span>
+                    </div>
+                        <span class="text-danger field-validation-valid" id="razon" data-valmsg-for="CompanyName" data-valmsg-replace="true" style="font-size:12px"></span>
+                    </div>
+
+                    <div class="dnw" id="name" style="display: none;">
+                        <div class="input-bs">
+                        <div class="input-bw mt-2 "  >
+                                <input type="text" required="required" name="FirstName" id="FirstName" value=""
+                                   data-val="true" data-val-required="El campo es requerido" ayuda="Nombre a quien se le facturará" />
+                            <span>Nombre</span>
+                        </div>
+                            <span class="text-danger field-validation-valid" id="nomb" data-valmsg-for="FirstName" data-valmsg-replace="true" style="font-size:12px"></span>
+
+                        </div>
+                        <div class="input-bs">
+                        <div class="input-bw mt-2 " id="lastName"  >
+                                <input type="text" required="required" name="LastName" id="LastName" value=""
+                                   data-val="true" data-val-required="El campo es requerido" ayuda="Apellido a quien se le facturará" />
+                            <span>Apellido</span>
+                        </div>
+                            <span class="text-danger field-validation-valid" id="last" data-valmsg-for="LastName" data-valmsg-replace="true" style="font-size:12px"></span>
+                        </div>
+                    </div>
+
+                   
+                   <div class="dnu">
+                        <div class="input-br mt-2">
+                            <input type="text" required="required" name="Street" id="altura" value=""
+                                   data-val="true" data-val-required="El campo es requerido" ayuda="Calle del domicilio de facturación" />
+                            <span>Calle</span>
+                        </div>
+                        <span class="text-danger field-validation-valid" data-valmsg-for="Street" data-valmsg-replace="true" style="font-size:12px"></span>
+
+                       
+                        <div class="input-br">
+                            <input type="text" required="required" name="StreetNumber" id="altura" value=""
+                                   data-val="true" data-val-required="El campo es requerido" ayuda="Número del domicilio de facturación" />
+                            <span>Altura</span>
+                        </div>
+                        <span class="text-danger field-validation-valid" data-valmsg-for="StreetNumber" data-valmsg-replace="true" style="font-size:12px"></span>
+
+                    
+
+                        <div class="input-b">
+                            <input type="text" name="Floor" id="piso" value=" " 
+                                    ayuda="Piso del domicilio de facturación" />
+                            <span>Piso</span>
+                        </div>
+                        <!--span class="text-danger field-validation-valid" data-valmsg-for="Floor" data-valmsg-replace="true"></span>-->
+
+                        
+
+                        <div class="input-b">
+                            <input type="text"  name="Depto" id="departamento" value=" "
+                                   ayuda="Departamento del domicilio de facturación" />
+                            <span>Departamento</span>
+                        </div>
+                        <!-- <span class="text-danger field-validation-valid" data-valmsg-for="Depto" data-valmsg-replace="true"></span>-->
+
+                        <div class="input-br prov mt-1">
+                            <select ayuda="Provincia del domicilio de facturación"
+                                    class="form-control form-select form-select-sm " name="City" id="provincia"
+                                    data-val="true" data-val-required="El campo es requerido">
+                                <option value="" selected="selected">Provincias</option>
+                                <option value="B">BUENOS AIRES</option>
+                                <option value="C">CAPITAL FEDERAL</option>
+                                <option value="K">CATAMARCA</option>
+                                <option value="H">CHACO</option>
+                                <option value="U">CHUBUT</option>
+                                <option value="X">CORDOBA</option>
+                                <option value="W">CORRIENTES</option>
+                                <option value="E">ENTRE RIOS</option>
+                                <option value="P">FORMOSA</option>
+                                <option value="Y">JUJUY</option>
+                                <option value="L">LA PAMPA</option>
+                                <option value="F">LA RIOJA</option>
+                                <option value="M">MENDOZA</option>
+                                <option value="N">MISIONES</option>
+                                <option value="Q">NEUQUEN</option>
+                                <option value="R">RIO NEGRO</option>
+                                <option value="A">SALTA</option>
+                                <option value="J">SAN JUAN</option>
+                                <option value="D">SAN LUIS</option>
+                                <option value="Z">SANTA CRUZ</option>
+                                <option value="S">SANTA FE</option>
+                                <option value="G">SANTIAGO DEL ESTERO</option>
+                                <option value="V">TIERRA DEL FUEGO</option>
+                                <option value="T">TUCUMAN</option>
+                            </select>
+                        </div>
+
+                        <span class="text-danger field-validation-valid" data-valmsg-for="City" data-valmsg-replace="true" style="font-size:12px"></span>
+                 
+                    </div>
+                </div>
+                <div class="col-6 colum2">
+                   
+                    <div class="input-br">
+                        <input type="text" required="required" name="Location" id="localidad" value=""
+                               data-val="true" data-val-required="El campo es requerido" ayuda="Localidad del domicilio de facturación" />
+                        <span>Localidad</span>
+                    </div>
+                    <span class="text-danger field-validation-valid" data-valmsg-for="Location" data-valmsg-replace="true" style="font-size:12px"></span>
+                    <div class="input-br">
+                        <input type="text" required="required" name="CPA" id="cp" value="" data-val="true" data-val-required="El campo es requerido" />
+                        <span>Código postal</span>
+                    </div>
+                    <span class="text-danger field-validation-valid" data-valmsg-for="CPA" data-valmsg-replace="true" style="font-size:12px"></span>
+                    <div class="input-br">
+                        <input required="required" ayuda="Teléfono de contacto" type="tel"
+                               name="CellPhone" id="telefono" value="" data-val="true"
+                               data-val-required="El campo es requerido" />
+                        <span>Celular</span>
+                    </div>
+                    <span class="text-danger field-validation-valid" data-valmsg-for="CellPhone"
+                          data-valmsg-replace="true" style="font-size:12px"></span>
+
+               
+
+                    <div class="input-br">
+                        <input required="required" ayuda="Escriba su correo electrónico" type="text"
+                               name="Email"  value="" data-val="true"
+                               data-val-required="El campo es requerido" />
+                        <span>Correo electrónico</span>
+                    </div>
+                    <span class="text-danger field-validation-valid" data-valmsg-for="Email"
+                          data-valmsg-replace="true" style="font-size:12px"></span>
+
+                        <div class="input-br">
+                            <input type="password" required="required" id="exampleInputPassword1" name="Password"
+                               value="" data-val="true" data-val-required="El campo es requerido" />
+                            <span>Contraseña</span>
+                        <i class="bi bi-eye-fill" id="togglePassword"></i>
+                        </div>
+                    <span class="text-danger field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true" style="font-size:12px"></span>
+                    
+                        <div class="input-br">
+                        <input type="password" required="required" id="exampleInputPassword2" name="Password" data-val="true" data-val-required="El campo es requerido" />
+                            <span>Confirmar contraseña</span>
+                        <i class="bi bi-eye-fill" id="togglePassword1"></i>
+                        </div>
+                        <span class="text-danger field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true" style="font-size:12px"></span>
+                    
+                </div>
+            </div>
+        </div>
+
+    
+
+        <div>
+            <span class="Error text-danger">
+              
+                @{
+                    if (ViewBag.Error)
+                    {
+                            <span class="text-danger">@ViewBag.ErrorMessage</span>
+                    }
+                }
+            </span>
+        </div>
+
+        <br />
+
+        <button type="submit" class="btn boton" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Registrarme
+        </button>
+        <hr>
+        <p class="text-center regist">¿Ya tienes cuenta? <a href="javascript:void(0);" class="iniciar" onclick="history.back()">Iniciar sesión</a></p>
+
+    </form>
+</div>
+
+@section Scripts {
+    <script>
+
+        document.getElementById("tipo_documento").addEventListener("change", function () {
+            var tipo_documento = this.value;
+            var spanDocumento = document.getElementById("span_documento"); 
+
+            if (tipo_documento === "DNI") {
+                document.getElementById("Company").style.display = "none";
+                document.getElementById("name").style.display = "flex";
+                spanDocumento.textContent = "N° de DNI";
+            } else if (tipo_documento === "CUIL" || tipo_documento === "CUIT") {
+                document.getElementById("Company").style.display = "block";
+                document.getElementById("name").style.display = "none";
+                spanDocumento.textContent = "N° de " + tipo_documento;
+            } else {
+                document.getElementById("Company").style.display = "none";
+                document.getElementById("name").style.display = "none";
+                spanDocumento.textContent = "N° de documento"; 
+            }
+        });
+
+
+        const togglePassword = document.querySelector('#togglePassword');
+        const password = document.querySelector('#exampleInputPassword1');
+        const togglePassword1 = document.querySelector('#togglePassword1');
+        const password1 = document.querySelector('#exampleInputPassword2');
+
+        togglePassword.addEventListener('click', function (e) {
+            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+            this.classList.toggle('bi-eye');
+            this.classList.toggle('bi-eye-slash');
+        });
+
+        togglePassword1.addEventListener('click', function (e) {
+            const type = password1.getAttribute('type') === 'password' ? 'text' : 'password';
+            password1.setAttribute('type', type);
+            this.classList.toggle('bi-eye');
+            this.classList.toggle('bi-eye-slash');
+        });
+    
+
+
+        
+
+        window.addEventListener('load', function () {
+            var select = document.getElementById('tipo_documento');
+ 
+            var options = select.getElementsByTagName('option');
+            for (var i = 0; i < options.length; i++) {
+                
+                if (options[i].value === '') {
+                    options[i].selected = true;
+                    break;
+                }
+            }
+        });
+
+
+
+
+        var piso = document.getElementById('piso');
+        var departamento = document.getElementById('departamento');
+
+
+        function handleInputChange() {
+            if (this.value !== '') {
+                this.classList.add('norequired');
+            } else {
+                this.classList.remove('norequired');
+            }
+        }
+
+       
+        piso.addEventListener('change', handleInputChange);
+
+        
+        window.addEventListener('load', function () {
+            piso.value = '';
+            handleInputChange.call(piso); 
+        });
+
+
+        
+        function handleDepartamentoChange() {
+            if (this.value !== '') {
+                this.classList.add('norequired');
+            } else {
+                this.classList.remove('norequired');
+            }
+        }
+
+        
+        departamento.addEventListener('change', handleDepartamentoChange);
+
+      
+        window.addEventListener('load', function () {
+            departamento.value = '';
+            handleDepartamentoChange.call(departamento); 
+        });
+
+
+
+
+    </script>
+}

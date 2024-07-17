@@ -1,0 +1,826 @@
+﻿* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+@font-face {
+    font-family: Gilroy-Regular;
+    src: url("../fonts/Gilroy-Regular.ttf")
+}
+
+
+
+@font-face {
+    font-family: Gilroy-Medium;
+    src: url("../fonts/Gilroy-Medium.ttf")
+}
+
+@font-face {
+    font-family: Gilroy-Heavy;
+    src: url("../fonts/Gilroy-Heavy.ttf")
+}
+
+@font-face {
+    font-family: Gilroy-Light;
+    src: url("../fonts/Gilroy-Light.ttf")
+}
+
+@font-face {
+    font-family: Gilroy-SemiBold;
+    src: url("../fonts/Gilroy-SemiBold.ttf")
+}
+
+@font-face {
+    font-family: Gilroy-Bold;
+    src: url("../fonts/Gilroy-Bold.ttf")
+}
+
+@font-face {
+    font-family: Gilroy-Extra-Bold-Italic;
+    src: url("./media/Gilroy-ExtraBoldItalic-FJ2AABRU.ttf")
+}
+
+html {
+    --mdc-filled-button-label-text-size: 1.25rem;
+    --mdc-filled-button-label-text-font: Gilroy;
+    --mdc-typography-font-family: Gilroy-Bold;
+    --mdc-typography-body1-font-size: 16px;
+    --mdc-theme-primary: #152663;
+    --mdc-typography-button-font-size: 1rem
+}
+
+
+
+.body {
+    background: #FAFAFA;
+}
+
+.login {
+    background: #FFFFFF;
+    border-radius: 6px;
+    height: auto;
+    margin-top: 30px;
+
+}
+
+nav {
+    background: #FFCE00;
+    height: 60px;
+}
+
+#logo {
+    position: relative;
+    width: 197px;
+    height: 28px;
+    left: 111px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-content:center;
+    width: 970px;
+    height: auto;
+    margin: 20px auto;
+    
+}
+
+    .form h4 {
+        margin-top: 20px;
+        color: #191919;
+        font-family: Gilroy-SemiBold;
+    }
+
+.pass {
+    display: flex;
+    flex-direction: column;
+}
+
+.form a {
+    font-family: Gilroy-Bold;
+    font-weight: 500;
+    color: #152663;
+    flex-direction: row-reverse;
+    font-size: 13px;
+}
+
+.columnas {
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+.colum1 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+   align-content: center;
+    gap: 4px;
+}
+
+.colum2 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 6px;
+}
+
+.dni {
+    position: relative;
+    left: 1px;
+    display: flex;
+    
+    gap: 8px;
+    right: 5px;
+}
+
+.dnu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 6px;
+}
+
+
+
+
+.dn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+    
+}
+.dnw {
+    display: flex;
+   gap:2px;
+    justify-content: center;
+}
+
+
+.form .boton {
+    display: inline-block;
+    width: 159px;
+    height:44px;
+    background-color: #FFCE00;
+    padding: 10px;
+    cursor: pointer;
+    font-family: Gilroy-SemiBold;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 30px auto;
+    border-radius: 100px;
+    color: #152663;
+}
+    .form .boton:hover{
+
+         opacity: 0.7;
+    }
+
+
+.input-bx, .input-bs, .input-br, .input-bw {
+    position: relative;
+    
+}
+.input-b {
+    position: relative;
+}
+
+     .input-bs{
+        display:flex;
+        flex-direction:column;
+    }
+.input-bx input {
+    width: 280px;
+    padding: 10px 12px;
+    border: 1px solid #d1d1d1;
+    border-radius: 5px;
+    color: #49454F;
+    outline: none;
+    font-size: 14px;
+    transition: 0.6s;
+    font-family: Gilroy-Regular;
+}
+.input-bw input {
+    width: 183px;
+    padding: 10px 12px;
+    border: 1px solid #d1d1d1;
+    border-radius: 5px;
+    outline: none;
+    color: #49454F;
+    font-size: 14px;
+    transition: 0.6s;
+    font-family: Gilroy-Regular;
+}
+.input-br input {
+    width: 370px;
+    padding: 10px 12px;
+    color: #49454F;
+    border: 1px solid #d1d1d1;
+    font-family: Gilroy-Regular;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+    transition: 0.6s;
+}
+.input-b input {
+    width: 370px;
+    padding: 10px 12px;
+    border: 1px solid #d1d1d1;
+    font-family: Gilroy-Regular;
+    border-radius: 5px;
+    color: #49454F;
+    outline: none;
+    font-size: 14px;
+    transition: 0.6s;
+    margin: 2px 0px;
+}
+
+.input-bs select {
+    width: 80px;
+    padding: 10px 12px;
+    border: 1px solid #d1d1d1;
+    font-family: Gilroy-Regular;
+    color: #49454F;
+    border-radius: 5px;
+    font-weight: 400;
+    outline: none;
+    font-size: 14px;
+    transition: 0.6s;
+}
+
+.input-br select {
+    width: 370px;
+    padding: 10px 12px;
+    border: 1px solid #d1d1d1;
+    font-family: Gilroy-Regular;
+    color: #49454F;
+    border-radius: 5px;
+    font-weight: 400;
+    outline: none;
+    font-size: 14px;
+    transition: 0.6s;
+}
+
+    .input-bx span {
+        position: absolute;
+        left: 0;
+        padding: 10px;
+        font-size: 14px;
+        font-weight: 400;
+        color: #49454F;
+        font-family: Gilroy-Regular;
+        pointer-events: none;
+        transition: 0.6s;
+    }
+.input-bw span {
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #49454F;
+    font-family: Gilroy-Regular;
+    pointer-events: none;
+    transition: 0.6s;
+}
+.input-br span {
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #49454F;
+    font-family: Gilroy-Regular;
+    pointer-events: none;
+    transition: 0.6s;
+}
+.input-b span {
+    position: absolute;
+    left: 0;
+    padding: 12px;
+    font-size: 14px;
+    font-weight:400;
+    color: #49454F;
+    font-family: Gilroy-Regular;
+    pointer-events: none;
+    transition: 0.6s;
+}
+
+
+
+.input-bx input:valid ~ span,
+.input-bx input:focus ~ span,
+.input-bx input:-webkit-autofill ~ span {
+    transform: translateX(10px) translateY(-7px);
+    font-size: 11px;
+    font-weight: 600;
+    color: #49454F;
+    padding: 0 10px;
+    background: #fff;
+    letter-spacing: 0.1rem;
+}
+
+.input-bx input:valid,
+.input-bx input:focus {
+    color: #49454F;
+}
+.input-bw input:valid ~ span,
+.input-bw input:focus ~ span,
+.input-bw input:-webkit-autofill ~ span {
+    transform: translateX(10px) translateY(-7px);
+    font-size: 11px;
+    font-weight: 600;
+    color: #49454F;
+    padding: 0 10px;
+    background: #fff;
+    letter-spacing: 0.1rem;
+}
+.input-bw input:valid,
+.input-bw input:focus {
+    color: #49454F;
+}
+
+.input-br input:valid ~ span,
+.input-br input:focus ~ span,
+.input-br input:-webkit-autofill ~ span {
+    transform: translateX(10px) translateY(-7px);
+    font-size: 11px;
+    font-weight: 600;
+    color: #49454F;
+    padding: 0 10px;
+    background: #fff;
+    letter-spacing: 0.1rem;
+}
+
+
+
+.input-b .norequired ~ span,
+.input-b input:focus ~ span,
+.input-b input:-webkit-autofill ~ span {
+    transform: translateX(10px) translateY(-7px);
+    font-size: 11px;
+    font-weight: 600;
+    color: #49454F;
+    padding: 0 10px;
+    background: #fff;
+    letter-spacing: 0.1rem;
+}
+
+.input-b input:placeholder-shown,
+.input-b input:focus,
+.input-br input:-webkit-autofill ~ span {
+    color: #49454F;
+}
+
+.input-br input:valid,
+.input-br input:focus,
+.input-br input:-webkit-autofill ~ span {
+    color: #49454F;
+}
+.form .iniciar {
+    font-family: Gilroy-Regular;
+    font-size: 16px;
+    font-weight: 600;
+    color: #152663;
+    margin-left: 6px;
+}
+
+/* Login------- */
+.login1 {
+    background: #FFFFFF;
+    border-radius: 6px;
+    height: 546px;
+    margin-top: 50px;
+}
+
+.forml h4 {
+    margin-top: 60px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+   
+    color: #191919;
+    font-family: Gilroy-SemiBold;
+}
+
+.forml {
+    display: flex;
+    flex-direction: column;
+    width: 370px;
+    height: 38px;
+    margin: 20px auto;
+    gap: 10px;
+}
+
+    .forml .forget {
+        font-family: Gilroy-Medium;
+        font-weight: 500;
+        color: #152663;
+        text-decoration: none;
+        font-size: 13px;
+        line-height: 24px;
+    }
+    .forml .regist {
+        font-family: Gilroy-Medium;
+        font-size: 16px;
+        font-weight: 500;
+        color: #49454F;
+    }
+    .forml .regist a {
+        font-family: Gilroy-SemiBold;
+        font-size: 16px;
+        font-weight: 500;
+        color: #152663;
+        margin-left: 6px;
+    }
+
+    .forml .boton {
+        width: 159px;
+        font-weight: 600;
+        height: 44px;
+        background-color: #FFCE00;
+        cursor: pointer;
+        font-family: Gilroy-SemiBold;
+        font-size: 16px;
+        margin: 30px auto;
+        border-radius: 100px;
+        color: #152663;
+    }
+
+      
+.informa {
+    display: flex;
+    text-align: right !important;
+    justify-content: space-between;
+}
+.input-bz {
+    position: relative;
+    
+}
+
+    .input-bz input {
+        width: 370px;
+        height: 38px;
+        padding: 14px 20px;
+        border: 1px solid #d1d1d1;
+        color: #49454F;
+        border-radius: 5px;
+        outline: none;
+        font-size: 14px;
+        transition: 0.6s;
+        font-family: Gilroy-Regular;
+    }
+
+
+    .input-bz span {
+        position: absolute;
+        left: 0;
+        padding: 10px;
+        font-size: 14px;
+        font-weight: 400;
+        color: #49454F;
+        font-family: Gilroy-Medium;
+        pointer-events: none;
+        transition: 0.6s;
+    }
+
+    .input-bz input:valid ~ span,
+    .input-bz input:focus ~ span,
+    .input-bz input:-webkit-autofill ~ span {
+        transform: translateX(10px) translateY(-7px);
+        font-size: 11px;
+        font-weight: 600;
+        padding: 0 6px;
+        background: #fff;
+        font-family: Gilroy-Light;
+    }
+
+    .input-bz input:valid,
+    .input-bz input:focus,
+    .input-bz input:-webkit-autofill ~ span {
+        color: #49454F;
+
+    }
+    .reque{
+        position: relative;
+        bottom: 10px;
+    }
+#togglePassword {
+    color: #BDBCBC;
+    position: relative;
+    left: -35px;
+    Width: 20px;
+    Height: 13px;
+    cursor: pointer;
+}
+
+#togglePassword1 {
+    color: #BDBCBC;
+    position: relative;
+    left: -35px;
+    Width: 20px;
+    Height: 13px;
+    cursor: pointer;
+}
+
+#exampleInputPassword1 {
+    padding-right: 30px;
+}
+
+#exampleInputPassword2 {
+    padding-right: 30px;
+}
+
+#togglePassword3 {
+    color: #BDBCBC;
+    position: relative;
+    left: 330px;
+    bottom: 77px;
+    Width: 20px;
+    Height: 13px;
+    cursor: pointer;
+}
+
+
+
+
+
+   
+
+.text-cont {
+    font-family: Gilroy-Light;
+}
+
+/*Aqui Empiezan los estilos de Envío-------------------------------------------*/
+
+.modal {
+    background: rgba(1,1,1,0.7);
+}
+.modal-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding: 4px;
+}
+
+.header-modal {
+    text-align: center;
+    margin: 5px auto;
+    margin-top: 40px;
+    color: #191919;
+    font-family: Gilroy-Bold;
+    
+}
+    .header-modal h5{
+        font-weight:600;
+        font-size: 22px;
+        color:#000000;
+        font-family: Gilroy-SemiBold;
+    }
+    .exito p{
+        font-weight:500;
+        font-size:16px;
+        color: #191919;
+        font-family: Gilroy-Medium;
+    }
+    .body-modal {
+        width:100%;
+        text-align: center;
+        margin: 1px auto;
+        color: #191919;
+        font-family: Gilroy-Regular;
+    }
+    .body-modal .revisar {
+        font-family: Gilroy-Regular;
+        color: #152663;
+        margin-bottom:5px;
+    }
+    .body-modal .revisar:hover{
+         opacity:0.7;
+    }
+
+        .footer-modal {
+           
+            margin: 10px auto;
+            color: #152663;
+            font-family: Gilroy-Bold;
+            margin-right: 2px;
+            margin-left: 2px;
+           
+        }
+#table th{
+    font-family:Gilroy-Medium;
+    color:#000000;
+}
+#tablet tbody {
+    font-family: Gilroy-Regular;
+    color: #191919;
+}
+#output {
+    color: #191919; 
+}
+.footer-modal .boton {
+    width: 144px;
+    height: 44px;
+    padding: 8px;
+    background-color: #FFCE00;
+    cursor: pointer;
+    font-family: Gilroy-SemiBold;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 100px;
+    
+    color: #152663;
+}
+
+    .footer-modal .boton:hover {
+        opacity:0.7;
+    }
+            .footer-modal .boton3 {
+                width: 144px;
+                height: 44px;
+                padding: 8px;
+                margin: 0 auto;
+                background-color: #FFCE00;
+                cursor: pointer;
+                font-family: Gilroy-SemiBold;
+                text-align: center;
+                font-size: 16px;
+                font-weight: 600;
+                border-radius: 100px;
+                color: #152663;
+            }
+            .footer-modal .segundo {
+                width: 124px;
+                height: 44px;
+                
+                background-color: #FFCE00;
+                cursor: pointer;
+                font-family: Gilroy-SemiBold;
+                padding: 8px;
+                font-size: 16px;
+                font-weight: 600;
+                border-radius: 100px;
+                color: #152663;
+            }
+
+            
+            .footer-modal .primero {
+                width: 124px;
+                height: 44px;
+               
+                border: 2px solid #FFCE00;
+               padding:8px;
+                cursor: pointer;
+                font-family: Gilroy-SemiBold;
+                font-size: 16px;
+                font-weight: 600;
+                border-radius: 100px;
+                color: #152663;
+            }
+                .footer-modal .primero:hover {
+                    background-color: #FFCE00;
+                }
+
+            .footer-modal .boton1 {
+                width: 144px;
+                height: 44px;
+                margin:0 auto;
+                padding: 8px;
+                border: 2px solid #FFCE00;
+                cursor: pointer;
+                font-family: Gilroy-SemiBold;
+                text-align: center;
+                font-size: 16px;
+                font-weight: 600;
+                border-radius: 100px;
+                color: #152663;
+            }
+
+        .footer-modal .boton1:hover {
+            background-color: #FFCE00;
+        }
+
+
+
+
+    /* proceso-------- */
+    .modal-content .btn-close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        margin: 12px 12px;
+    }
+
+.footer-modal progress {
+    width: 100px;
+}
+
+.progres{
+    display:flex;
+    flex-direction:column;
+}
+
+
+@media only screen and (max-width: 776px) {
+
+    .container {
+        width: 100%;
+        height: 830px;
+    }
+
+    .login {
+        height: 950px;
+    }
+
+    .form {
+        width: 100%;
+        height:auto;
+        padding: 0 20px;
+        margin: 2px auto;
+        align-content: flex-start;
+    }
+
+    .colum1, .colum2 {
+        width: 100%;
+    }
+    .colum1 {
+        align-items: center;
+    }
+    .input-bx input, .input-br input, .input-bs select, .input-br select, .input-b input {
+        width: 100%;
+        gap: 10px;
+    }
+
+    #logo {
+        width: 150px;
+        height: auto;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .dni {
+        width: 300px;
+    }
+    .dnw {
+        display: flex;
+       flex-direction:column;
+    }
+    .dnw input{
+        width:300px;
+    }
+    .d-flex {
+        width: 100%;
+        height: auto;
+        display: flex !important;
+        align-items: center;
+    }
+
+    .input-bs .form-select {
+        width: 100px;
+    }
+
+    .input-bx input {
+        width:191px;
+    }
+
+    .input-br select {
+        width: 300px;
+    }
+
+    .input-br input {
+        width: 300px;
+        margin: 6px 0;
+    }
+
+    .colum2 {
+        align-items: center;
+        gap: 3px;
+    }
+
+    #togglePassword1, #togglePassword {
+        display: block;
+        position: relative;
+        bottom: 43px;
+        left: 260px;
+    }
+}
+@media (min-width: 1200px)   {
+    h4 {
+        font-size: 20px;
+    }
+    
+}
